@@ -1,0 +1,43 @@
+.main {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        width: 100%;
+    
+}
+.card {
+    border: 1px solid black;
+    height: 350px;
+    width: 200px;
+    display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	justify-content: space-between;
+	align-items: stretch;
+	align-content: stretch;
+}
+.topBox {
+    display:flex;
+    float:Left;
+}
+.number {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.bottomBox {
+    display: flex;
+    justify-content: flex-end;
+    border: 1px solid red;
+    height:25px;
+    width:100%;
+}
+.bottomBox-content {
+    border: 5px dotted green;
+    transform: rotate(180deg);
+    height: 20px;
+    width: 20px;
+}
