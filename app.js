@@ -1,6 +1,6 @@
 
 
-window.onload = function () {
+window.onload = function generate() {
     var top = document.querySelector(".topBox")
     var numb = document.querySelector(".number")
     var bottom = document.querySelector(".bottomBox")
@@ -11,7 +11,7 @@ window.onload = function () {
     let currentSign = sign[Math.floor(Math.random()*sign.length -1)]
     let currentValue = value[Math.floor(Math.random()*value.length -1)]
     
-    button.addEventListener("click", function(){
+    button.addEventListener("click", function generate(){
         if (currentSign ==='♦' || currentSign === '♥') {
     top.style.color = color[1];
     bottom.style.color = color[1];

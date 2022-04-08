@@ -1,22 +1,51 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <link rel="stylesheet" href="./style.css">
-        </head>
-    <body>
-        <div class="main">
-            <div class="card" type="card">
-                <div class="topBox"></div>
-                <div class="number"></div>
-                <div class="bottomBox">
-                    <div class="bottomBox-content"></div>
-                </div>
-            </div>
-        <div class="btn">
-            <button type="button">Click Here</button>
-        </div>
-        </div>
 
-        <script type="text/javascript" src="./app.js"></script>
-        </body>
+<head>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div class="main">
+        <div class="card" type="card">
+            <div class="topBox"></div>
+            <div class="number"></div>
+            <div class="bottomBox">
+                <div class="bottomBox-content"></div>
+            </div>
+        </div>
+        <div class="btn">
+            <button type="button" onClick="generate()">Click Here</button>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="./app.js">
+        function generate() {
+            var top = document.querySelector(".topBox")
+            var numb = document.querySelector(".number")
+            var bottom = document.querySelector(".bottomBox")
+            var button = document.querySelector(".btn")
+            const sign = ['♦', '♥', '♠', '♣',];
+            const value = ['1', '2', '3', '4', '5', '6', '7', '8', '9', 'J', 'Q', 'K'];
+            const color = ['black', 'red'];
+            let currentSign = sign[Math.floor(Math.random() * sign.length)]
+            let currentValue = value[Math.floor(Math.random() * value.length)]
+
+            button.addEventListener("click", function generate() {
+                if (currentSign === '♦' || currentSign === '♥') {
+                    top.style.color = color[1];
+                    bottom.style.color = color[1];
+                } else {
+                    top.style.color = color[0];
+                    bottom.style.color = color[0];
+                }
+                numb.innerHTML = currentValue;
+                top.innerHTML = currentSign;
+                bottom.innerHTML = currentSign;
+
+            })
+        }
+    </script>
+</body>
+
 </html>
