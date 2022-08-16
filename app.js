@@ -1,6 +1,6 @@
 
 
-window.onload = function generate() {
+function generate() {
     var top = document.querySelector(".topBox")
     var numb = document.querySelector(".number")
     var bottom = document.querySelector(".bottomBox")
